@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DonateToday</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DonateToday.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DonateToday</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Index">
+                                หน้าแรก
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark"role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                บริจาค
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Student" asp-action="Categories">หมวดหมู่ <br><p style="color: darkgray; font-size: 12px;">ค้นหาการบริจาคตามหมวดหมู่</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Student" asp-action="CrisisRelief">กองทุนเพื่อผลกระทบทางสังคม <br><p style="color: darkgray; font-size: 12px;">การสนับสนุนโดยตรงสำหรับความต้องการเร่งด่วน</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Student" asp-action="SocialImpactFund">การบรรเทาทุกข์ในยามวิกฤต <br><p style="color: darkgray; font-size: 12px;">บริจาคเพื่อบรรเทาทุกข์ที่ได้รับการตรวจสอบ</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Student" asp-action="SupporterSpace">พื้นที่สำหรับผู้สนับสนุน <br><p style="color: darkgray; font-size: 12px;">แรงบบรดาลใน คำถามที่พบบ่อย และสถานที่ให้</p></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                ระดมทุน
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">วิธีการเริ่ม DonateToday <br><p style="color: darkgray; font-size: 12px;">ความช่วยเหลือแบบทีละขั้นตอน ตัวอย่าง และอื่นๆ</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">หมวดหมู่การระดมทุน <br><p style="color: darkgray; font-size: 12px;">ค้นหาหมวดหมู่ที่เหมาะสมกับคุณ</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">การระดมทุนของทีม <br><p style="color: darkgray; font-size: 12px;">ระดมทุนร่วมกับทีมงาน</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">บล็อกการระดมทุน <br><p style="color: darkgray; font-size: 12px;">ทรัพยากร เคล็ดลับ และอื่นๆ</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">เคล็ดลับการระดมทุน <br><p style="color: darkgray; font-size: 12px;">คำแนะนำในการระดมทุนฉบับสมบูรณ์</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">ไอเดียการระดมทุน <br><p style="color: darkgray; font-size: 12px;">ไอเดียจุดประกายความคิดสร้างสรรค์ของคุณ</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">ระดมทุนเพื่อการกุศล <br><p style="color: darkgray; font-size: 12px;">ระดมทุนเพื่อการกุศล</p></a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">ลงทะเบียนเป็นองค์กรการกุศล <br><p style="color: darkgray; font-size: 12px;">ขอรับเงินบริจาคเพื่อการกุศลของคุณ</p></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                เกี่ยวกับ
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">DonateToday ทำงานอย่างไร</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">การรับประกันการบริจาคของ DonateToday</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">ประเทศที่ได้รับการสนับสนุ</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">การกำหนดราคา</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">ศูนย์ช่วยเหลือ</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">ห้องข่าว</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">สมัครงานกับเรา</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">เกี่ยวกับ DonateToday</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="SignIn" role=" button">
+                                ลงชื่อเข้าใช้
+                            </a>
+                        </li>
+
+                    </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2567 - DonateToday - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

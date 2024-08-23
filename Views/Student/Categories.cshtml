@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<DonateToday.Models.Student>;
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<h1 class="text-center">Categories</h1>
+
+@foreach(var student in Model)
+{
+    <p>รหัสนักศึกษา : @student.Id</p>
+    <p>อีเมล : @student.Email</p>
+    <p>รหัส : @student.Password</p>
+    <hr />
+}

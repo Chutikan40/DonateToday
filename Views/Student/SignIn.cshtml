@@ -1,0 +1,21 @@
+﻿@model Student;
+@{
+    ViewData["Title"] = "SignIn";
+}
+
+<h1>SignIn</h1>
+<form method="POST" asp-controller="Student" asp-action="Categories">
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" type="email" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control"/>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary my-2">Submit</button>
+</form>
+
+<h1></h1>
